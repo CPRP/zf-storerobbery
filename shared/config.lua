@@ -17,29 +17,29 @@ end
 
 
 -- ### MINIGAMES CONFIGS
-Config.RegisterMinigame = 'qb-lock' -- Available options: 'qb-lock', 'ox_lib', 'ps-ui'
-Config.SafeMinigame = 'qb-lock' -- Available options: 'qb-lock', 'ox_lib', 'memorygame', 'ps-ui', 'boostinghack'
+Config.RegisterMinigame = 'ps-ui' -- Available options: 'qb-lock', 'ox_lib', 'ps-ui'
+Config.SafeMinigame = 'ps-ui' -- Available options: 'qb-lock', 'ox_lib', 'memorygame', 'ps-ui', 'boostinghack'
 
 
 -- ### POLICE CONFIGS
 Config.AlertPolice = true
 Config.AlertChance = 100
 Config.PoliceRequired = 2
-Config.PoliceJobs = {'police', 'bcso', 'sahp', 'sasp'}
+Config.PoliceJobs = {'police'}
 
 
 -- ### REGISTER CONFIGS
 Config.RegisterItem = 'lockpick'
 Config.RegisterItemLost = 1 -- Available options: 0 (doesn't lose item'), 1 (loses item when failed), 2 (loses item when failed and when successful)
-Config.RegisterItemLostChance = 20 -- % of chance to lose the item
+Config.RegisterItemLostChance = 30 -- % of chance to lose the item
 
 
 -- ### REGISTER LOOT
-Config.RegisterLoot = 'money' -- Available options: 'money', 'markedbills', 'item'
-Config.RegisterLootMoney = {min = 1000, max = 5000}
-Config.RegisterLootMarkedBills = {min = 10, max = 50}
+Config.RegisterLoot = 'markedbills' -- Available options: 'money', 'markedbills', 'item'
+Config.RegisterLootMoney = {min = 250, max = 2000}
+Config.RegisterLootMarkedBills = {min = 1, max = 3}
 Config.RegisterMaxItems = 2
-Config.RegisterLoottable = { -- Loot table for the safe when Config.Safeloot = 'item'
+Config.RegisterLoottable = { -- Loot table for the safe when Config.Registerloot = 'item'
     [1] = {item = 'markedbills', chances = 80, min = 10, max = 50},
     [2] = {item = 'weapon_crowbar', chances = 80, min = 1, max = 3},
     [3] = {item = 'markedbills', chances = 60, min = 10, max = 50},
@@ -55,9 +55,9 @@ Config.SafeItemLostChance = 50 -- % of chance to lose the item
 
 
 -- ### SAFE LOOT
-Config.SafeLoot = 'money' -- Available options: 'money', 'markedbills', 'item'
-Config.SafeLootMoney = {min = 1000, max = 5000}
-Config.SafeLootMarkedBills = {min = 15, max = 60}
+Config.SafeLoot = 'markedbills' -- Available options: 'money', 'markedbills', 'item'
+Config.SafeLootMoney = {min = 500, max = 5000}
+Config.SafeLootMarkedBills = {min = 1, max = 5}
 Config.SafeMaxItems = 5
 Config.SafeLoottable = { -- Loot table for the safe when Config.Safeloot = 'item'
     [1] = {item = 'markedbills', chances = 80, min = 20, max = 60},
@@ -239,6 +239,26 @@ Config.RegisterZones = {
         alerted = false,
         time = 0
     },
+    [33] = {
+        coords = vector3(1698.39, 4922.62, 42.06),
+        alerted = false,
+        time = 0
+    },
+    [34] = {
+        coords = vector3(1696.67, 4923.83, 42.06),
+        alerted = false,
+        time = 0
+    },
+    [35] = {
+        coords = vector3(2557.73, 381.16, 108.62),
+        alerted = false,
+        time = 0
+    },
+    [36] = {
+        coords = vector3(2555.64, 381.27, 108.62),
+        alerted = false,
+        time = 0
+    },
 }
 
 Config.SafeZones = {
@@ -329,6 +349,21 @@ Config.SafeZones = {
     },
     [18] = {
         coords = vector3(170.99, 6642.58, 31.7),
+        alerted = false,
+        time = 0
+    },
+    [19] = {
+        coords = vector3(-168.40, 6318.80, 30.58),
+        alerted = false,
+        time = 0
+    },
+    [20] = {
+        coords = vector3(1707.85, 4920.49, 42.06),
+        alerted = false,
+        time = 0
+    },
+    [21] = {
+        coords = vector3(2549.46, 387.85, 108.62),
         alerted = false,
         time = 0
     },
