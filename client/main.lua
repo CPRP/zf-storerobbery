@@ -67,9 +67,12 @@ local function Minigame(type)
             return success or false
         elseif Config.RegisterMinigame == 'ps-ui' then
             local success = false
-            exports['ps-ui']:Circle(function(result)
-                success = result
-            end, 5, 8)
+            exports['ps-ui']:Thermite(function(success)
+                if success = result
+             end, 10, 5, 1) -- Time, Gridsize (5, 6, 7, 8, 9, 10), IncorrectBlocks
+            -- exports['ps-ui']:Circle(function(result)
+            --     success = result
+            -- end, 5, 8)
             return success
         end
     elseif type == 'safe' then
@@ -97,7 +100,7 @@ local function Minigame(type)
             local success = false
             exports['ps-ui']:Scrambler(function(success)
                 if success = result
-            end, "alphanumeric", 30, 0) -- Type (alphabet, numeric, alphanumeric, greek, braille, runes), Time (Seconds), Mirrored (0: Normal, 1: Normal + Mirrored 2: Mirrored only )
+            end, "runes", 30, 0) -- Type (alphabet, numeric, alphanumeric, greek, braille, runes), Time (Seconds), Mirrored (0: Normal, 1: Normal + Mirrored 2: Mirrored only )
             -- exports['ps-ui']:Circle(function(result)
             --     success = result
             -- end, 1, 5)
