@@ -8,7 +8,7 @@ Config.Locale = 'en' -- ESX only. Available options: 'en', 'fr'
 
 -- ### SCRIPTS CONFIGS
 Config.TargetScript = 'qb-target' -- Target script used on your server. Available options: 'qb-target', 'ox_target', 'qtarget'
-Config.DispatchScript = 'qb-core' -- Dispatch script used on your server. Available options: 'qb-core', 'ps-dispatch', 'cd_dispatch'
+Config.DispatchScript = 'ps-dispatch' -- Dispatch script used on your server. Available options: 'qb-core', 'ps-dispatch', 'cd_dispatch'
 Config.NotificationScript = 'qb-core' -- Notifications used on the server. Available options: 'qb-core', 'esx', 'ox-lib', 'custom'
 Config.CustomNotification = function(msg, type) -- Only useable when Config.NotificationScript is set to 'custom'
     -- Put your code here
@@ -37,9 +37,9 @@ Config.RegisterItemLostChance = 30 -- % of chance to lose the item
 -- ### REGISTER LOOT
 Config.RegisterLoot = 'markedbills' -- Available options: 'money', 'markedbills', 'item'
 Config.RegisterLootMoney = {min = 250, max = 2000}
-Config.RegisterLootMarkedBills = {min = 1, max = 3}
-Config.RegisterMaxItems = 2
-Config.RegisterLoottable = { -- Loot table for the safe when Config.Registerloot = 'item'
+Config.RegisterLootMarkedBills = {min = 250, max = 2000}
+Config.RegisterMaxItems = 3
+Config.RegisterLoottable = { -- Loot table for the register when Config.Registerloot = 'item'
     [1] = {item = 'markedbills', chances = 80, min = 10, max = 50},
     [2] = {item = 'weapon_crowbar', chances = 80, min = 1, max = 3},
     [3] = {item = 'markedbills', chances = 60, min = 10, max = 50},
@@ -49,30 +49,30 @@ Config.RegisterLoottable = { -- Loot table for the safe when Config.Registerloot
 
 
 -- ### SAFE CONFIGS
-Config.SafeItem = 'safecracker'
+Config.SafeItem = 'advancedlockpick'
 Config.SafeItemLost = 1 -- Available options: 0 (doesn't lose item'), 1 (loses item when failed), 2 (loses item when failed and when successful)
 Config.SafeItemLostChance = 50 -- % of chance to lose the item
 
 
 -- ### SAFE LOOT
-Config.SafeLoot = 'markedbills' -- Available options: 'money', 'markedbills', 'item'
+Config.SafeLoot = 'item' -- Available options: 'money', 'markedbills', 'item'
 Config.SafeLootMoney = {min = 500, max = 5000}
-Config.SafeLootMarkedBills = {min = 1, max = 5}
+Config.SafeLootMarkedBills = {min = 500, max = 5000}
 Config.SafeMaxItems = 5
 Config.SafeLoottable = { -- Loot table for the safe when Config.Safeloot = 'item'
-    [1] = {item = 'markedbills', chances = 80, min = 20, max = 60},
-    [2] = {item = 'weapon_crowbar', chances = 80, min = 1, max = 3},
-    [3] = {item = 'markedbills', chances = 60, min = 20, max = 60},
-    [4] = {item = 'markedbills', chances = 40, min = 20, max = 60},
-    [5] = {item = 'markedbills', chances = 20, min = 20, max = 60},
+    [1] = {item = 'sapphire_necklace', chances = 70, min = 1, max = 3},
+    [2] = {item = 'rolex', chances = 60, min = 1, max = 3},
+    [3] = {item = '10kgoldchain', chances = 50, min = 1, max = 3},
+    [4] = {item = 'emerald_necklace', chances = 40, min = 1, max = 3},
+    [5] = {item = 'security_card_01', chances = 10, min = 1, max = 1},
 }
 
 
 -- ### PROGRESS BAR
 Config.Progressbar = 'qb-core' -- Progressbar script used on your server. Available options: 'qb-core', 'oxlib-regular', 'oxlib-circle'
 Config.Progresstimes = {
-    ['register'] = 5000,
-    ['safe'] = 15000
+    ['register'] = 15000,
+    ['safe'] = 25000
 }
 
 
