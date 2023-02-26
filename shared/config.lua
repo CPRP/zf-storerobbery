@@ -40,11 +40,11 @@ Config.RegisterLootMoney = {min = 250, max = 2000}
 Config.RegisterLootMarkedBills = {min = 250, max = 2000}
 Config.RegisterMaxItems = 3
 Config.RegisterLoottable = { -- Loot table for the register when Config.Registerloot = 'item'
-    [1] = {item = 'markedbills', chances = 80, min = 10, max = 50},
-    [2] = {item = 'weapon_crowbar', chances = 80, min = 1, max = 3},
-    [3] = {item = 'markedbills', chances = 60, min = 10, max = 50},
-    [4] = {item = 'markedbills', chances = 40, min = 10, max = 50},
-    [5] = {item = 'markedbills', chances = 20, min = 10, max = 50},
+    [1] = {item = 'sapphire_necklace', chances = 70, min = 1, max = 3},
+    [2] = {item = 'rolex', chances = 60, min = 1, max = 3},
+    [3] = {item = '10kgoldchain', chances = 50, min = 1, max = 3},
+    [4] = {item = 'emerald_necklace', chances = 40, min = 1, max = 3},
+    [5] = {item = 'security_card_01', chances = 10, min = 1, max = 1},
 }
 
 
