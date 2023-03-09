@@ -129,11 +129,11 @@ CreateCallback('zf-storerobbery:changeState', function(source, cb, rid, type)
                 AddMoney(src, rdmAmount, 'cash')
             elseif Config.RegisterLoot == 'markedbills' then
                 local rdmAmount = math.random(Config.RegisterLootMarkedBills.min, Config.RegisterLootMarkedBills.max)
-                -- if Config.Framework == 'qb-core' then
-                --     AddItem(src, 'markedbills', 1, type)
-                -- elseif Config.Framework == 'esx' then
-                --     AddMoney(src, 'black_money', rdmAmount)
-                -- end
+                if Config.Framework == 'qb-core' then
+                    AddItem(src, 'markedbills', 1, type)
+                elseif Config.Framework == 'esx' then
+                    AddMoney(src, 'black_money', rdmAmount)
+                end
             elseif Config.RegisterLoot == 'item' then
                 local itemAmount = math.random(1, Config.RegisterMaxItems)
                 local itemGot = 0
