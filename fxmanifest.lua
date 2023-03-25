@@ -19,6 +19,6 @@ shared_scripts {
     
     
     -- ### UNCOMMENT BELOW FOR QBCORE ###
-    --'@qb-core/shared/locale.lua',
-    --'qb_locales/*.lua',
+    '@qb-core/shared/locale.lua',
+    'qb_locales/*.lua',
 }
